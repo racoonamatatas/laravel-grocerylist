@@ -13,5 +13,11 @@
     <textarea id="description" name="description"></textarea>
     <br>
     <button type="submit">Opslaan</button>
+    <label for="category">Categorie:</label>
+    <select name="category_id" id="category" required>
+        @foreach($categories as $category)
+            <option value="{{ $category->id }}">{{ $category->name }}</option>
+        @endforeach
+    </select>
 </form>
 @endsection

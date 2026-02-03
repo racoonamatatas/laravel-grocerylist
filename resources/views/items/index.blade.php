@@ -7,8 +7,9 @@
 <table>
     <thead>
         <tr>
-            <th>Naam</th>
-            <th>Beschrijving</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Category</th>
             <th>Acties</th>
         </tr>
     </thead>
@@ -17,6 +18,7 @@
         <tr>
             <td>{{ $item->name }}</td>
             <td>{{ $item->description }}</td>
+            <td>{{ $item->category->name }}</td>
             <td>Edit/Delete</td>
             <td>
                 <form action="{{ route('items.destroy', $item->id) }}" method="POST">
